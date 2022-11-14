@@ -1,0 +1,35 @@
+.border-bottom{
+     text-align:center;
+     font-family:sans-serif;
+     height:auto;
+     font-size: 0.5em;
+}
+
+#tooltip{
+
+  background-color:#FFFF8F;
+  text-align:center;
+  margin-top: 20px;
+  color: #7A7A7A;
+  border-radius: 100px;
+  font-size: 20px;
+
+}
+
+#tooltip>#tooltip_left{
+  visibility: hidden;       /* 이벤트가 없으면 툴팁 영역을 숨김 */
+  width: 120px;             /* 툴팁 영역의 넓이를 설정 */
+  background-color: black;
+  color: #fff;
+  font-size:8px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;       /* 절대 위치를 사용 */
+  z-index: 1;
+}
+
+#tooltip:hover > #tooltip_left{
+  visibility: visible;
+}
+

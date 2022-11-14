@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹소켓</title>
+</head>
+<body>
+
+
+
+<script>
+const socket = new WebSocket(
+  'ws://'
+  + '127.0.0.1:8000'
+  + '/ws/notification/'
+  + 'center_name'
+  + '/'
+);
+
+export default {
+  name: "DashBoardAlarmCard",
+  props: {
+    alarmList: Array
+  },
+  methods: {
+    createWebSocket () {
+      socket.onopen = function(e) {
+        console.log('서버와 연결되었습니다.')
+      };
+    },
+  },
+  created () {
+    this.createWebSocket()
+  }
+}
+</script>
+
+
+
+</body>
+</html>

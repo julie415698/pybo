@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Short - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../static/assets/img/favicon.png" rel="icon">
+  <link href="../../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Scaffold - v4.9.0
+  * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+
+ <script src="https://kit.fontawesome.com/a26bf7fb44.js" crossorigin="anonymous"></script>
+  <div class="intro_bg-D" style = "background-color:white">
+
+    <div class = "first_layer">
+
+        <nav class="navbar navbar-expand-lg navbar-light  bg-light" style="height: 75px ;">
+            <div class=" container">
+<div >
+    <a href="{% url 'pybo:home' %}" style="font: weight = bolder; display:inline-block; text-decoration:none" ><h3 style="color:#2476f9; margin-top:10px;">SHORT</h3></a>
+                <img src="../../static/assets/img/logo4.png" width="30" height="40">
+</div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+
+                <!---"navbar-nav ml-auto"-->
+                <ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'pybo:home' %}" style="font-weight: bolder;" ><i class="fa-solid fa-house"></i> HOME <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class = "nav-link" href = "#" data-toggle="modal" data-target="#loginModal" style="font-weight: bolder;"><i class="fa-solid fa-right-to-bracket"></i> LOGIN</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"  style="font-weight: bolder;" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="nav-link" href="{% url 'pybo:index' %}" style="font-weight: bolder;"><i class="fa-solid fa-arrow-up-from-bracket"></i> URL</a>
+                      <a class="nav-link" href="{% url 'image:image' %}" style="font-weight: bolder;"><i class="fa-solid fa-image"></i> IMAGE</a>
+                      <a class="nav-link" href="{% url 'chart:chart' %}" style="font-weight: bolder;"><i class="fa-solid fa-image"></i> ALL CHART</a>
+                        <a class="nav-link" href="{% url 'chart:my_chart' %}" style="font-weight: bolder;"><i class="fa-solid fa-image"></i> CHART </a>
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+
+    </div>
+
+<!-- Modal -->
+<script src="https://kit.fontawesome.com/a26bf7fb44.js" crossorigin="anonymous"></script>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-right-to-bracket"></i> LogIn</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class = "row">
+            <div class ="col-6">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-brands fa-google"></i> Login with Google</button>
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"> <i class="fa-regular fa-envelope"></i> LogIn with Email</button>
+            </div>
+            <div class ="col-6">
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-user-plus"></i> SignUp</button>
+              <button type="button" class="btn btn-outline-dark btn-block btn-sm"><i class="fa-solid fa-user-plus"></i> LogIn</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+          <div>
+            <h1 align="center" style="color:#2476f9;">Welecome to SHORT!</h1>
+            <h2 align="center" style="line-height:170%" >인터넷으로 혼자 하는 공부 <br> 간단하게 요약정리</h2>  <!--color="#2d7ef9"-->
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+          <img src="../../static/assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="zoom-in">
+            <img src="../../static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0">
+              <h3  align="center">About Us</h3>
+              <h5  align="center" style="line-height:170%" >저희는 WRC 프로젝트 팀 입니다. <br></h5>
+              <p  align="center">
+              공부마저 인터넷으로 하는 시대이지만, <br>즐겨찾기 이외에 내가 공부한 것을 정리 할 수 있는 방법은 없습니다.<br>
+                이를 위해 인터넷 정보들을 간편하게 정리하고 확인할 수 있도록 <br>저희 WRC가 SHORT 이라는 웹사이트를 만들었습니다.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <strong>정리하기</strong><br> 사용자가 원하는 문서를 저장하고 간편하게 볼 수 있도록 문서의 정리를 도와줍니다.</li>
+                <li><i class="bi bi-check-circle"></i> <strong>사용자 관심도</strong><br> 사용자가 저장한 문서의 데이터를 활용하여, 사용자의 관심도를 파악합니다.</li>
+                <li><i class="bi bi-check-circle"></i>  <strong>인기분야 순위 </strong><br> 여러 사용자의 문서를 분석하여, 사용자들이 관심있어하는 분야를 알려줍니다.</li>
+              </ul>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item" data-aos="fade-up" onclick="location.href='{% url 'pybo:index' %}'">
+                <a class="nav-link active show" data-bs-toggle="tab" href="{% url 'pybo:index' %}">
+                  <h4>게시판으로 이동</h4>
+                  <p>저장했던 문서들 확인하기</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100" onclick="location.href='{% url 'chart:my_chart' %}'">
+                <a class="nav-link" data-bs-toggle="tab">
+                  <h4>사용자 관심도 확인</h4>
+                  <p>검색어로 보는 나의 관심도는?</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200" onclick="location.href='{% url 'chart:chart' %}'">
+                <a class="nav-link" data-bs-toggle="tab"  >
+                  <h4>인기분야 순위 확인</h4>
+                  <p>사용자들이 가장 많이 검색한 분야는?</p>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src="../../static/assets/img/features-1.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src="../../static/assets/img/features-2.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src="../../static/assets/img/features-3.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src="../../static/assets/img/features-4.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+
+
+
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../static/assets/vendor/aos/aos.js"></script>
+  <script src="../../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../static/assets/js/main.js"></script>
+  <script src="../../static/assets/js/main.js"></script>
+
+  </body>
+
+</html>
+
+
+{% endblock %}
